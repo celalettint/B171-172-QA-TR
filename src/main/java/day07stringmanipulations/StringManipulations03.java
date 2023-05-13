@@ -38,5 +38,24 @@ public class StringManipulations03 {
         System.out.println(last);
         System.out.println(""+first+last);//AC
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

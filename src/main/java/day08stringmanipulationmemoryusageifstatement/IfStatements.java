@@ -10,13 +10,14 @@ public class IfStatements {
 
         /*
               if(you study hard){
-            you will learn Java     ==> java
-                     }
+                 you will learn Java     ==> java
+                }
          */
 
         //Ornek 1: Sayi pozitif ise ekrana pozitif yazdirin
 
-        int num=-13;
+
+        int num=13;
 
         if(num>0){
             System.out.println(num+"==> pozitiftir");

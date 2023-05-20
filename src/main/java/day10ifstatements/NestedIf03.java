@@ -17,34 +17,35 @@ public class NestedIf03 {
                     zehirli ==> Gecerli
         */
 
-        //Note: Eger bir methodu tekrar tekrar kullanmak istiyorsaniz onu bir variable a atayarak kullanmak daha makuldur.
-
         Scanner input = new Scanner(System.in);
         System.out.println("Passwordunuzu giriniz..");
         String pwd = input.nextLine();
 
         char firstChar = pwd.charAt(0);
 
-        if(firstChar>='A' && firstChar<='Z'){// Password'un ilk harfi buyuk harf ise
-            if(firstChar=='A'){
+        if (firstChar>= 'A' && firstChar <= 'Z') {// Password'un ilk harfi buyuk harf ise
+            if (firstChar == 'A') {
                 System.out.println("Gecerli Password");
-            }else{
+            } else {
                 System.out.println("Gecersiz Password cunku buyuk harf ama A degil");
             }
-        } else if (firstChar>='a' && firstChar<='z') {//Passwordun ilk harfi kucuk harf ise
+        } else if (firstChar>= 'a' && firstChar <= 'z') {//Passwordun ilk harfi kucuk harf ise
 
-            if(firstChar=='z'){
+            if (firstChar == 'z') {
                 System.out.println("Gecerli Password");
-            }else{
+            } else {
                 System.out.println("Gecersiz Password cunku kucuk harf ama z degil");
             }
-        }else{
+        } else {
             System.out.println("Ilk karakter harf olmalidir");
         }
+
+        //Note: Eger bir methodu tekrar tekrar kullanmak istiyorsaniz onu bir variable a atayarak kullanmak daha makuldur
 
 
     }
 }
+
 
 
 

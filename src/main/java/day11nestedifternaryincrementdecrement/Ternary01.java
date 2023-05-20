@@ -1,14 +1,15 @@
 package day11nestedifternaryincrementdecrement;
 
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
 
 public class Ternary01 {
+
     public static void main(String[] args) {
         //Ternary Statement
-        //Ornek1: Sayi 10 dan kucuk ise console a "kucuk" yazdirin degil ise "kucuk degil" yazdirin
-        //----------if else cozumu-------
-
-        int num = 13;
+        //Ornek 1: Sayi 10 dan kucuk ise console a "kucuk" yazdirin, degil ise "Kucuk degil" yazdirin
+        //----------if else cozumu--------
+        int num = 12;
 
         if (num < 10) {
             System.out.println("Kucuk");
@@ -16,46 +17,47 @@ public class Ternary01 {
             System.out.println("Kucuk degil");
         }
 
-        //---------ternary cozumu----------
-                   //Condition  ?   Condition true ise calisir  : Condition false ise calisir ;
-        String sonuc = num < 10 ?               "Kucuk"         :       "Buyuk"               ;
+        //-------Ternary Cozumu------
+        //  Conditon    ?   Condition true ise calisir  :   Condition falsi ise calisir ;
+        String sonuc = num < 10 ? "Kucuk" : "Kucuk degil";
         System.out.println(sonuc);
 
-        //Ornek 2 Sayi cift ise console a "cift" , tek ise "Tek" yazdirin
+        //Ornek 2: Sayi cift ise console a "cift", tek ise "Tek" yazdirin
+        //----------if else cozumu--------
+        int k = 13;
 
-        //----------if else cozumu-------
-        int k =13;
-        if(k%2==0){
-            System.out.println("Cift");
-        }else {
-            System.out.println("Tek");
+        if (k % 2 == 0) {
+            System.out.println("cift");
+        } else {
+            System.out.println("tek");
         }
 
-        //---------ternary cozumu----------
-                    //Condition  ?   Condition true ise calisir  : Condition false ise calisir ;
-       String result= k%2==0      ?        "cift"                 :       "Tek"           ;
+        //----------Ternary cozumu--------
+        String result = k % 2 == 0 ? "cift" : "tek";
         System.out.println(result);
 
-        //Ornek 3: Sayi 0 dan buyuk ise "pozitif" degilse ekrana "pozitif degil" yazdirin
-        int i = 5;
-        System.out.println(  i>0 ? "Pozitif" : "pozitif degil");
+        //Ornek 3: Sayi 0 dan buyukse pozitif degilse ekrana pozitif degil yazdirin
+        int a = -5;
+        System.out.println(a > 0 ? "pozitiftir" : "pozitif degil");
 
-        //Ornek 4: Kullanicidan iki sayi aliniz, "buyuk olmayan" (kucuk veya esit olan) sayiyi yazdiriniz
+        //Ornek 4: Kullanicidan iki sayi aliniz "buyuk olmayan" (kucuk veya esit olan) sayiyi yazdiriniz
         Scanner input = new Scanner(System.in);
         System.out.println("iki sayi giriniz..");
-        double a = input.nextDouble();
-        double b = input.nextDouble();
 
-        //1.yol if else
-        if(a<b){
-            System.out.println(a);
-        }else{
-            System.out.println(b);
+        double first = input.nextDouble();
+        double second = input.nextDouble();
+
+        //1. yol if else cozumu
+        if (first < second) {
+            System.out.println(first);
+        } else {
+            System.out.println(second);
         }
 
         //2. yol Ternary
-        double result2 = a<b ? a : b;
+        double result2 = first < second ? first : second;
         System.out.println(result2);
+
 
     }
 }
